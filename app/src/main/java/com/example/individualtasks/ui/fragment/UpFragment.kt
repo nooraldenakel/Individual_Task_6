@@ -31,7 +31,7 @@ class UpFragment : BaseFragment<FragmentUpBinding>() {
                 connection.dataTransition(onNext)
             },
             {onError->
-                Log.i("Error","onError $onError")
+                Log.i("Error","onError ${onError.message}")
             }
         )
     }
