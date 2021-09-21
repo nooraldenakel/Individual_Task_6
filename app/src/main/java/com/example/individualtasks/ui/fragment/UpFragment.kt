@@ -27,8 +27,8 @@ class UpFragment : BaseFragment<FragmentUpBinding>() {
         }.debounce(1500, TimeUnit.MILLISECONDS).publish()
         observable.connect()
         observable.subscribe(
-            {textNext ->
-                connection.dataTransition(textNext)
+            {onNext ->
+                connection.dataTransition(onNext)
             },
             {onError->
                 Log.i("Error","onError $onError")
